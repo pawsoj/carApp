@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { LayoutComponent } from './layout.component';
 import { ViewsRoutingModule } from './views-routing.module';
-import {MaterialModule} from './material.module';
 
 @NgModule({
     declarations: [
@@ -13,7 +12,6 @@ import {MaterialModule} from './material.module';
 
       // this needs to be declared after all modules
       ViewsRoutingModule,
-      MaterialModule,
     ],
     exports: [
     ],

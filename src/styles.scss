@@ -1,8 +1,79 @@
-@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+//Materials
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
 
-$color-primary: #1A237E;
+// Bootstrap
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/mixins";
+@import "~bootstrap/scss/utilities";
+@import "~bootstrap/scss/grid";
+@import "~bootstrap/scss/bootstrap-grid";
+@import "~bootstrap/scss/navbar";
+@import "~bootstrap/scss/nav";
 
-.navbar-primary {
-    background-color: $color-primary;
-    color: #fff;
+//grid
+$gutter: 10px;
+$sm: 576px;
+$md: 768px;
+$lg: 992px;
+$xl: 1200px;
+
+//fonts
+$font-family-main: "Roboto", sans-serif;
+$font-weight-light: 100;
+$font-weight-light: 300;
+$font-weight-regular: 400;
+$font-weight-semibold: 600;
+$font-weight-bold: 700;
+
+//colors
+$color-dark-primary: #0D47A1;
+$color-dark-secondary:#1565C0;
+$color-light-primary: #fff;
+$color-light-secondary: #E3F2FD;
+
+
+//colors
+
+//general
+* {
+  outline: none !important;
 }
+
+body,
+html {
+  font-family: $font-family-main;
+  font-style: normal;
+  font-size: 16px;
+  letter-spacing: 0.02em;
+  font-weight: $font-weight-regular;
+  overflow-x: hidden;
+  margin: 0;
+}
+
+.navbar-primary{
+    color: $color-light-primary;
+    background-color: $color-dark-primary;
+}
+
+.search-container{
+  border-radius: 5px;
+  border: 1px solid rgba(0, 0, 0, .1);
+  
+  .search-title{
+    padding: 5px 30px;
+    background-color: $color-dark-secondary;
+    color: #fff;
+  }
+
+  .search-content{
+    padding: 30px;
+  }
+}
+
+table {
+  width: 100%;
+  box-shadow: none !important;
+}
+
+

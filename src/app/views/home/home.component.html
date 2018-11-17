@@ -1,0 +1,65 @@
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-12 mt-5">
+            <div class="search-container">
+                <div class="search-title">
+                    <h4>Wyszukiwarka</h4>
+                </div>
+                <div class="search-content">
+                    <div class="row">
+                        <div class="col">
+                            <p>Param 1</p>
+                            <mat-slider thumbLabel [displayWith]="formatLabel" tickInterval="1" min="0" max="10" value="0"></mat-slider>
+                        </div>
+                        <div class="col">
+                            <p>Param 1</p>
+                            <mat-slider thumbLabel [displayWith]="formatLabel" tickInterval="1" min="0" max="10" value="0"></mat-slider>
+                        </div>
+                        <div class="col">
+                            <p>Param 1</p>
+                            <mat-slider thumbLabel [displayWith]="formatLabel" tickInterval="1" min="0" max="10" value="0"></mat-slider>
+                        </div>
+                        <div class="col">
+                            <p>Param 1</p>
+                            <mat-slider thumbLabel [displayWith]="formatLabel" tickInterval="1" min="0" max="10" value="0"></mat-slider>
+                        </div>
+                        <div class="col">
+                            <p>Param 1</p>
+                            <mat-slider thumbLabel [displayWith]="formatLabel" tickInterval="1" min="0" max="10" value="0"></mat-slider>
+                        </div>
+                    </div>
+                    <div class="row mt-5">
+                        <div class="col text-center">
+                            <button mat-flat-button class="mr-4">Wyczyść</button>
+                            <button mat-stroked-button>Szukaj</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row justify-content-center">
+        <div class="col-12 mt-5 mb-5">
+            <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+                <ng-container matColumnDef="position">
+                    <th mat-header-cell *matHeaderCellDef> No. </th>
+                    <td mat-cell *matCellDef="let element"> {{element.position}} </td>
+                </ng-container>
+                <ng-container matColumnDef="name">
+                    <th mat-header-cell *matHeaderCellDef> Name </th>
+                    <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+                </ng-container>
+                <ng-container matColumnDef="weight">
+                    <th mat-header-cell *matHeaderCellDef> Weight </th>
+                    <td mat-cell *matCellDef="let element"> {{element.weight}} </td>
+                </ng-container>
+                <ng-container matColumnDef="symbol">
+                    <th mat-header-cell *matHeaderCellDef> Symbol </th>
+                    <td mat-cell *matCellDef="let element"> {{element.symbol}} </td>
+                </ng-container>
+                <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+            </table>
+        </div>
+    </div>
+</div>
